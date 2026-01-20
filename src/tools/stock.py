@@ -41,8 +41,9 @@ def fetch_index_tickers_HK() -> list[str]:
             code = "".join(ch for ch in code_cell if ch.isdigit())
             if not code:
                 continue
-
-            ticker = code.zfill(4) + ".HK"
+            
+            code_int = int(code)
+            ticker = str(code_int).zfill(4) + ".HK"
             tickers.append(ticker)
 
         logger.info(f'Fetched HSI tickers: {len(tickers), tickers[:10]}')
@@ -203,7 +204,7 @@ def fetch_fundamental_data(symbol_list: list[str]) -> list[dict]:
 # })
 # #result_3 = fetch_stock_news.invoke({"tickers": ["0700.HK", "0005.HK"]})
 #result_4 = fetch_fundamental_data.invoke({"symbol_list": ["0700.HK",  "0005.HK"]})
-# result_5 = fetch_index_tickers_HK.invoke({})
+result_5 = fetch_index_tickers_HK.invoke({})
 
 # print(result_1)
 # if isinstance(result_1, list):
@@ -211,7 +212,7 @@ def fetch_fundamental_data(symbol_list: list[str]) -> list[dict]:
 # print(result_2) 
 #print(result_3) successed
 #print(result_4)
-#print(result_5)
+print(result_5)
 
 
 #result_4 ouput: 
