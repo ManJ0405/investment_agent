@@ -1,0 +1,26 @@
+# LangChain ecosystem
+langchain>=0.3.0
+langchain-core>=0.3.0
+langgraph>=0.2.0
+langserve>=0.2.0
+
+# Web framework and server
+fastapi>=0.115.0
+uvicorn>=0.30.0
+streamlit>=1.39.0
+
+# Financial data and analysis
+yfinance>=0.2.50
+yahooquery>=2.3.0
+pytickersymbols>=1.0.0
+pandas>=2.2.0
+pandas-ta>=0.3.14b0
+
+# Type hints
+typing-extensions>=4.12.0
+
+# Optional: For Jupyter/IPython display (if using notebooks)
+ipython>=8.25.0
+
+# HTTP client (dependency of yfinance/yahooquery)
+urllib3>=2.2.0
