@@ -10,6 +10,7 @@ from prompts.investment_agent import prompt_template
 from langchain.messages import AnyMessage, SystemMessage, ToolMessage
 from typing_extensions import TypedDict, Annotated
 from langchain_core.runnables import RunnableLambda
+from langgraph.prebuilt import ToolNode
 from IPython.display import Image, display
 from langserve import add_routes
 from fastapi import FastAPI
@@ -63,15 +64,16 @@ def llm_call(state: dict):
     }
     
 # Define tool node
-def tool_node(state: dict):
-    """Performs the tool call"""
+# def tool_node(state: dict):
+#     """Performs the tool call"""
 
-    result = []
-    for tool_call in state["messages"][-1].tool_calls:
-        tool = tools_by_name[tool_call["name"]]
-        observation = tool.invoke(tool_call["args"])
-        result.append(ToolMessage(content=observation, tool_call_id=tool_call["id"]))
-    return {"messages": result}
+#     result = []
+#     for tool_call in state["messages"][-1].tool_calls:
+#         tool = tools_by_name[tool_call["name"]]
+#         observation = tool.invoke(tool_call["args"])
+#         result.append(ToolMessage(content=observation, tool_call_id=tool_call["id"]))
+#     return {"messages": result}
+tool_node = ToolNode(tools)
 
 # Define logic to determine whether to end
 # Conditional edge function to route to the tool node or end based upon whether the LLM made a tool call
@@ -124,7 +126,7 @@ add_routes(app, agent, path="/agent")
 
 #  Invoke
 # from langchain.messages import HumanMessage
-# messages = [HumanMessage(content="Can you recommend me some stock in US market? And analyse them.")]
+# messages = [HumanMessage(content="Can you recommend me some stock in HK market? And analyse them.")]
 # messages = agent.invoke({"messages": messages})
 # for m in messages["messages"]:
 #    m.pretty_print()
