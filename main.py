@@ -4,16 +4,15 @@ import subprocess
 from langchain_core.messages import HumanMessage
 from IPython.display import Image, display
 import time
-import uvicorn
 import logging
-
+import sys
 
 # Setting
 logging.basicConfig(
     level=logging.INFO,                         # Show INFO
     format='%(asctime)s [%(levelname)s] %(message)s',  # time + level + messages
     handlers=[
-        logging.StreamHandler(),                # Ouput to terminal
+        logging.StreamHandler(sys.stdout),                # Ouput to terminal
         logging.FileHandler("agent.log")        
     ]
 )
@@ -58,16 +57,9 @@ def streamlit_playground() :
     logger.info(f'Started Playground on http://localhost:8501')
     logger.info(f'Network url: http://172.18.249.174:8501')
             
-# def langserve():
-#     print(f'Running langserve...')
-#     print(f'http://localhost:9000')
-
-#     uvicorn.run(app, host="localhost", port=9000)
             
 if __name__ == "__main__":
     pull_model()
-    
-    # langserve()
     
     streamlit_playground()
     

@@ -4,7 +4,7 @@ from langgraph.checkpoint.memory import MemorySaver
 from langchain.chat_models import init_chat_model
 from langgraph.graph import StateGraph, START, MessagesState, add_messages, END
 from urllib3 import response
-from tools.stock import fetch_index_tickers_HK, fetch_index_tickers_US_EU, fetch_stock_history_data, fetch_stock_news, fetch_fundamental_data
+from tools.stock import fetch_fundamental_data_and_news, fetch_index_tickers, fetch_stock_history_data
 from tools.analysis import initial_filter, trend_follow, mean_reversion
 from prompts.investment_agent import prompt_template
 from langchain.messages import AnyMessage, SystemMessage, ToolMessage
@@ -29,11 +29,9 @@ prompt = ChatPromptTemplate.from_messages([
 
 # Augment the LLM with tools
 tools = [
-    fetch_index_tickers_HK,
-    fetch_index_tickers_US_EU,
+    fetch_index_tickers,
     fetch_stock_history_data, 
-    fetch_stock_news,
-    fetch_fundamental_data,
+    fetch_fundamental_data_and_news,
     initial_filter,
     trend_follow,
     mean_reversion
@@ -63,16 +61,6 @@ def llm_call(state: dict):
         "llm_calls": state.get('llm_calls', 0) + 1
     }
     
-# Define tool node
-# def tool_node(state: dict):
-#     """Performs the tool call"""
-
-#     result = []
-#     for tool_call in state["messages"][-1].tool_calls:
-#         tool = tools_by_name[tool_call["name"]]
-#         observation = tool.invoke(tool_call["args"])
-#         result.append(ToolMessage(content=observation, tool_call_id=tool_call["id"]))
-#     return {"messages": result}
 tool_node = ToolNode(tools)
 
 # Define logic to determine whether to end
@@ -119,14 +107,3 @@ app = FastAPI(
 
 add_routes(app, agent, path="/agent")
 
-
-#  Test
-#  Show the agent
-# display(Image(agent.get_graph(xray=True).draw_mermaid_png()))
-
-#  Invoke
-# from langchain.messages import HumanMessage
-# messages = [HumanMessage(content="Can you recommend me some stock in HK market? And analyse them.")]
-# messages = agent.invoke({"messages": messages})
-# for m in messages["messages"]:
-#    m.pretty_print()

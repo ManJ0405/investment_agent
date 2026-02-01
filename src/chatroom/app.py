@@ -1,4 +1,5 @@
 import streamlit as st
+from langchain_core.messages import HumanMessage, AIMessage
 from agent import agent
 
 st.set_page_config(page_title="AI Investment Agent", page_icon="💹")
@@ -22,11 +23,23 @@ if prompt:
 
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
+            
+            st.session_state.messages.append({"role": "user", "content": prompt})
+            
+            langchain_messages = []
+            for m in st.session_state.messages:
+                if m["role"] == "user":
+                    langchain_messages.append(HumanMessage(content=m["content"]))
+                elif m["role"] == "assistant":
+                    langchain_messages.append(AIMessage(content=m["content"]))
+            
             result = agent.invoke(
-                {"messages": st.session_state.messages},
+                {"messages": langchain_messages},
                 config={"configurable": {"thread_id": "streamlit_session"}}
             )
             ai_reply = result["messages"][-1].content
             st.markdown(ai_reply)
+            
+    
     
     st.session_state.messages.append({"role": "assistant", "content": ai_reply})

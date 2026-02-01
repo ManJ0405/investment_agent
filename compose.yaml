@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ManJ0405
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ai_invest
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data

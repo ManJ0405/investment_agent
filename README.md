@@ -15,7 +15,15 @@ This project is a **multi-tool, stateful AI agent** designed for stock market an
 Built with **LangGraph** for agent orchestration, **Ollama** for local LLM, **yfinance**, **yahooquery**, **akshare**, and **pandas-ta** for data handling.
 
 ## Latest Update
-- 20/01/2026: Uploaded an AI agent with base functions. (Tool: stock, analysis)
+- 01/02/2026: 
+        - Merged fetch_stock_news and fetch_fundamental_data to fetch_fundamental_data_and_news (see src/tools/stock.py)
+        - Merged fetch_index_tickers and fetch_index_tickers_US_EU to fetch_index_tickers (see src/tools/stock.py)
+        - Add schemas for all tools (see src/schemas/ticker_schema.py)
+        - Modified system prompt (see src/prompts/investment_agent.py)
+        - Imporved tools call (see src/agent.py)
+        - Connect to PostgreSQL for saving HSI and HSTECH tickers list (see db/)
+- 20/01/2026: 
+        - Uploaded an AI agent with base functions. (Tool: stock, analysis)
 
 ## Project Structure
 ```
@@ -73,11 +81,9 @@ python main.py run
     - Trend follow
     - Mean reversion
 - Stock:
-    - Fetch index tickers (HK)
-    - Fetch index tickers (US&EU)
+    - Fetch index tickers
     - Fetch stock history data
-    - Fetch stock news
-    - Fetch fundamental data
+    - Fetch stock news and fundamental data
 
 ## Future Improvements
 - Add RAG

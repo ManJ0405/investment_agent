@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS constituents (
+    id BIGSERIAL PRIMARY KEY,
+    index_name TEXT NOT NULL,
+    ticker TEXT NOT NULL,
+    region TEXT NOT NULL,
+    created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
