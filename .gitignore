@@ -1,5 +1,5 @@
 /.env
-myenv/
+.venv/
 .langgraph_api/
-src/tools/test.py
 pgdata/
+.github/

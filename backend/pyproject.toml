@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "investment-agent"
+version = "0.1.0"
+description = "AI Investment Agent using LangGraph and Ollama"
+readme = "README.md"
+authors = [
+  { name = "Ko Man Hin", email = "mandes2003@gmail.com" }
+]
+requires-python = ">=3.10"
+license = { text = "MIT" }  # 可改成你想要的授權
+keywords = ["langgraph", "ai-agent", "investment", "finance", "ollama"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "langchain>=0.3.0",
+    "langgraph>=0.2.0",
+    "langserve>=0.2.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "streamlit>=1.39.0",
+    "yfinance>=0.2.50",
+    "yahooquery>=2.3.0",
+    "pytickersymbols>=1.0.0",
+    "pandas>=2.2.0",
+    "pandas-ta>=0.3.14b0",
+    "psycopg>=3.2.0",
+    "python-dotenv>=1.0.0",
+    "ollama>=0.3.0", 
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "pytest",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = { attr = "investment_agent.__version__" } 
