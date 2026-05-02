@@ -1,6 +1,6 @@
 from langchain.tools import tool
 from yahooquery import Ticker
-from ..schemas.ticker_schema import TickerListInput, Ohlcv_input, validate_ticker_tool
+from schemas.ticker_schema import TickerListInput, Ohlcv_input, validate_ticker_tool
 from typing import Dict, List
 import pandas as pd
 import pandas_ta as ta

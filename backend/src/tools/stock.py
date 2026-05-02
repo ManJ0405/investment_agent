@@ -5,7 +5,7 @@ from datetime import datetime
 import yfinance as yf
 import pandas as pd
 import psycopg
-from ..schemas.ticker_schema import IndexConstituentsInput, HistoricalPriceInput,TickerListInput, validate_historical_prices, validate_ticker_tool
+from src.schemas.ticker_schema import IndexConstituentsInput, HistoricalPriceInput,TickerListInput, validate_historical_prices, validate_ticker_tool
 from typing import List, Dict, Any
 import logging
 import os

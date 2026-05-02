@@ -1,15 +1,16 @@
 # LangChain ecosystem
-langchain>=0.3.0
-langchain-core>=0.3.0
-langgraph>=0.2.0
+langchain>=1.0.0
+langchain-core>=1.0.0
+langgraph>=1.0.0
 langserve>=0.2.0
 langchain-ollama>=1.0.1
+ollama>=0.3.0
 
 # Web framework and server
 fastapi>=0.115.0
 uvicorn>=0.30.0
 streamlit>=1.39.0
-sse_starlette>3.2.0
+sse-starlette>=3.2.0
 
 # Financial data and analysis
 yfinance>=0.2.50
@@ -17,15 +18,19 @@ yahooquery>=2.3.0
 pytickersymbols>=1.0.0
 pandas>=2.2.0
 pandas-ta>=0.3.14b0
-psycopg>=3.2.3         
+psycopg>=3.2.3
+
+# Schemas (Pydantic models; FastAPI already depends on pydantic)
+pydantic>=2.7.0
 
 # Type hints
 typing-extensions>=4.12.0
 
-# Optional: For Jupyter/IPython display (if using notebooks)
+# Jupyter / IPython (graph PNG rendering, notebooks)
 ipython>=8.25.0
 
-# HTTP client (dependency of yfinance/yahooquery)
+# HTTP stack (Yahoo finance clients)
 urllib3>=2.2.0
 
+# Configuration
 python-dotenv>=1.2.1

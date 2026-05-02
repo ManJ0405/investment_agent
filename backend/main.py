@@ -5,7 +5,7 @@ project_root = Path(__file__).parent.resolve()
 sys.path.insert(0, str(project_root))
 
 from langchain_core.runnables.history import MessagesOrDictWithMessages
-from src.agent import agent
+from src.agent.graph import agent
 import subprocess
 from langchain_core.messages import HumanMessage
 from IPython.display import Image, display
@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 
 def pull_model():
-    model_name = "llama3.2:3b"
+    model_name = "gemma4:e4b"
     logger.info(f'Pulling model {model_name}...')
     try:
         subprocess.run(["ollama", "pull",  model_name])
@@ -47,9 +47,27 @@ def run_agent():
             break
         try:
             messages = HumanMessage(content= user_input)
-            result = agent.invoke({"messages": messages}, config= config)
-            
-            logger.info(f"AI: {result["messages"][-1].content}")
+            result = agent.invoke(
+                {"messages": messages},
+                config={**config, "recursion_limit": 25},
+            )
+            for i, m in enumerate(result.get("messages") or []):
+                preview = m.content
+                if isinstance(preview, list):
+                    preview = str(preview)
+                if isinstance(preview, str) and len(preview) > 500:
+                    preview = preview[:500] + "…"
+                logger.info(
+                    "  msg[%d] %s: %r",
+                    i,
+                    getattr(m, "type", type(m).__name__),
+                    preview,
+                )
+            last = (result.get("messages") or [])[-1] if result.get("messages") else None
+            final_text = last.content if last and hasattr(last, "content") else ""
+            if isinstance(final_text, list):
+                final_text = str(final_text)
+            logger.info("AI: %s", final_text)
                 
         except Exception as e:
             logger.error(f'Error: {e}')

@@ -42,7 +42,10 @@ if prompt:
             
             result = agent.invoke(
                 {"messages": langchain_messages},
-                config={"configurable": {"thread_id": "streamlit_session"}}
+                config={
+                    "configurable": {"thread_id": "streamlit_session"},
+                    "recursion_limit": 25,
+                },
             )
             ai_reply = result["messages"][-1].content
             st.markdown(ai_reply)
