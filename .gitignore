@@ -3,3 +3,8 @@ backend/.env
 .langgraph_api/
 pgdata/
 .github/
+
+# FinBERT / ML experiment outputs (too large for GitHub; re-train locally)
+backend/experiment/models/finbert-multitask/
+*.pt
+*.safetensors

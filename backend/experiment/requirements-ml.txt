@@ -1,0 +1,11 @@
+# Extra deps for experiment/FinBert_Fine_tune.ipynb (install inside backend/.venv)
+transformers>=4.44.0
+torch>=2.2.0
+datasets>=3.0.0
+accelerate>=0.34.0
+evaluate>=0.4.0
+scikit-learn>=1.5.0
+matplotlib>=3.9.0
+seaborn>=0.13.0
+ipykernel>=6.29.0
+notebook>=7.2.0

@@ -1,0 +1,7 @@
+text,sentiment,sentiment_score,market_impact,sector_impact
+"The Federal Reserve raised interest rates by 50 basis points citing persistent inflation.",negative,-0.8,high,low
+"Apple reported record iPhone sales and raised full-year guidance.",positive,0.9,medium,high
+"Oil prices surged after OPEC announced production cuts affecting energy stocks.",negative,-0.6,high,high
+"Local bakery chain opens two new stores in suburban malls.",neutral,0.0,low,low
+"Semiconductor shortage eases as major chipmakers expand capacity.",positive,0.5,medium,high
+"European banking regulators tighten capital requirements for systemically important lenders.",negative,-0.4,high,high

@@ -1,0 +1,2 @@
+# Trained model weights are saved here locally after running FinBert_Fine_tune.ipynb.
+# They are gitignored (>100 MB). Re-run the notebook to regenerate, or download ProsusAI/finbert from Hugging Face.
