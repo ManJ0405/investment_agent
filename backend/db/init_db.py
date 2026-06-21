@@ -10,23 +10,30 @@ env_path = Path(__file__).parent.parent / '.env'  # db/ → backend/ → .env
 load_dotenv(dotenv_path=env_path, override=True)
 
 def make_dsn() -> str:
-     # Get .env variables
+    # Get .env variables
     db_name = os.getenv('db_name')
     user = os.getenv('user')
     password = os.getenv('password')
     host = os.getenv('host')
     port = os.getenv('port')
-    
-    # print(f"  db_name  = {db_name}")
-    # print(f"  user     = {user}")
-    # print(f"  password = {password}")
-    # print(f"  host     = {host}")
-    # print(f"  port     = {port}")
-    
+
+    missing = [k for k, v in {
+        "db_name": db_name,
+        "user": user,
+        "password": password,
+        "host": host,
+        "port": port,
+    }.items() if not v]
+    if missing:
+        raise RuntimeError(
+            f"Missing DB env vars: {', '.join(missing)}. "
+            "Set them in backend/.env before using DB-backed tools."
+        )
+
     dsn = f"dbname={db_name} user={user} password={password} host={host} port={port}"
-    
+
     return dsn
-    
+
 
 def init_table():
     BASE = os.path.dirname(os.path.abspath(__file__))
@@ -41,12 +48,8 @@ def init_table():
             for stmt in [s.strip() for s in sql_text.split(";") if s.strip()]:
                 cur.execute(stmt + ";")
             logger.info("Table `constituents` created or already exists.")
-            
-            
-init_table()
-            
-            
 
 
-    
+if __name__ == "__main__":
+    init_table()
 

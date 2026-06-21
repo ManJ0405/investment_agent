@@ -29,6 +29,11 @@ Built with **LangGraph** for agent orchestration, **Ollama** for local LLM, **yf
         - Connect to PostgreSQL for saving HSI and HSTECH tickers list (see db/)
 - 20/01/2026: 
         - Uploaded an AI agent with base functions. (Tool: stock, analysis)
+- 20/06/2026:
+        - Added production-style Pillar 2 trend module (`src/pillars/pillar2_trend`)
+        - Added deterministic trend scoring API endpoint (`/api/v1/pillars/pillar2/trend-signal`)
+        - Added unit tests for uptrend/downtrend and input validation
+        - Added container deployment artifacts (`Dockerfile`, `.dockerignore`)
 
 ## Project Structure
 ```
@@ -100,6 +105,22 @@ python main.py run
     - Fetch index tickers
     - Fetch stock history data
     - Fetch stock news and fundamental data
+
+## Pillar 2 API (Production-style)
+
+Run API locally:
+
+```bash
+uvicorn src.api.app:app --reload --port 8000
+```
+
+Example endpoint:
+
+- `POST /api/v1/pillars/pillar2/trend-signal`
+- `GET /healthz`
+- Agent tool `pillar2_trend_signal_api` calls this endpoint via `PILLAR2_API_BASE_URL` (default `http://127.0.0.1:8000`)
+
+Deployment notes for Azure demo are in `deploy/azure/README.md`.
 
 ## Future Improvements
 - Add RAG

@@ -75,6 +75,8 @@ def supervisor_node(state: AgentState):
     summary = ""
     if state.get("fetched_data"):
         summary += "Data has been fetched.\n"
+    if state.get("analysis_result"):
+        summary += "Analysis has been performed.\n"
 
     last_user_msg = next((m.content for m in reversed(state["messages"]) if m.type == "human"), "")
 
