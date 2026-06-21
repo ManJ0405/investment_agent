@@ -10,7 +10,7 @@ readme = "README.md"
 authors = [
   { name = "Ko Man Hin", email = "mandes2003@gmail.com" }
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 license = { text = "MIT" }  # 可改成你想要的授權
 keywords = ["langgraph", "ai-agent", "investment", "finance", "ollama"]
 classifiers = [
@@ -30,7 +30,7 @@ dependencies = [
     "yahooquery>=2.3.0",
     "pytickersymbols>=1.0.0",
     "pandas>=2.2.0",
-    "pandas-ta>=0.3.14b0",
+    "pandas-ta>=0.4.71b0",
     "psycopg[binary]>=3.2.0",
     "python-dotenv>=1.0.0",
     "ollama>=0.3.0", 
