@@ -48,9 +48,17 @@ def trend_signal(payload: Pillar2Input) -> Pillar2Output:
     ema_spread_ratio = (ema_fast - ema_slow) / ema_slow if ema_slow else 0.0
     ema_slope = _safe_float(latest["ema_fast"]) - _safe_float(previous["ema_fast"])
 
-    trend_component = 50.0 if close > ema_slow else 20.0
-    strength_component = min(max(adx, 0.0), 50.0) * 0.8
-    momentum_component = 15.0 if ema_slope > 0 and ema_spread_ratio > 0 else 5.0
+    trend_direction = 1.0 if ema_spread_ratio > 0 else (-1.0 if ema_spread_ratio < 0 else 0.0)
+    slope_direction = 1.0 if ema_slope > 0 else (-1.0 if ema_slope < 0 else 0.0)
+    direction_alignment = 1.0 if trend_direction == slope_direction else 0.4
+
+    trend_component = 50.0 + (18.0 * trend_direction)
+    strength_component = min(max(adx, 0.0), 50.0) * 0.45 * trend_direction * direction_alignment
+    momentum_component = (
+        10.0 * trend_direction
+        if trend_direction != 0 and slope_direction == trend_direction
+        else -4.0 * trend_direction
+    )
 
     # Penalize unstable high-volatility regimes.
     volatility_penalty = max((atr_pct - 0.04) * 400.0, 0.0)
@@ -74,6 +82,7 @@ def trend_signal(payload: Pillar2Input) -> Pillar2Output:
         "ema_slow": round(ema_slow, 4),
         "ema_spread_ratio": round(ema_spread_ratio, 6),
         "ema_fast_slope": round(ema_slope, 6),
+        "trend_direction": "up" if trend_direction > 0 else ("down" if trend_direction < 0 else "flat"),
         "adx_14": round(adx, 4),
         "atr_pct_14": round(atr_pct, 6),
         "volatility_penalty": round(volatility_penalty, 4),
