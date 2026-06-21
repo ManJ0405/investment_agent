@@ -1,1 +1,1 @@
-from .init_db import *
+"""Database package for index constituents storage."""

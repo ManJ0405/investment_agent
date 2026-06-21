@@ -17,8 +17,8 @@ yfinance>=0.2.50
 yahooquery>=2.3.0
 pytickersymbols>=1.0.0
 pandas>=2.2.0
-pandas-ta>=0.3.14b0
-psycopg>=3.2.3
+pandas-ta>=0.4.71b0
+psycopg[binary]>=3.2.3
 
 # Schemas (Pydantic models; FastAPI already depends on pydantic)
 pydantic>=2.7.0

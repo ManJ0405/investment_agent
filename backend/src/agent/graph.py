@@ -14,6 +14,7 @@ from fastapi import FastAPI
 from agents.supervisor import supervisor_node
 from agents.fetcher import fetcher_node
 from agents.analyzer import analyzer_node
+from agents.responder import responder_node
 from agent.state import AgentState
 
 
@@ -44,6 +45,7 @@ agent_builder = StateGraph(state_schema=AgentState)
 agent_builder.add_node("supervisor_node", supervisor_node)
 agent_builder.add_node("fetcher_node", fetcher_node)
 agent_builder.add_node("analyzer_node", analyzer_node)
+agent_builder.add_node("responder_node", responder_node)
 
 
 # Add edges to connect nodes
@@ -54,12 +56,12 @@ agent_builder.add_conditional_edges(
     {
         "fetcher": "fetcher_node",
         "analyzer": "analyzer_node",
-       # "reporter": "reporter",
-        "FINISH": END
-    }
+        "FINISH": "responder_node",
+    },
 )
 agent_builder.add_edge("fetcher_node", "supervisor_node")
 agent_builder.add_edge("analyzer_node", "supervisor_node")
+agent_builder.add_edge("responder_node", END)
 
 # Compile the agent
 agent = agent_builder.compile()

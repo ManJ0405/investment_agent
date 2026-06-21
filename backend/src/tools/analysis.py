@@ -106,7 +106,9 @@ def initial_filter(tickers: List[str]) -> List[str]:
 @validate_ticker_tool(schema_class=Ohlcv_input)
 def trend_follow(tickers: List[str], ohlcv: Dict) -> Dict:
     """
-    Fetch trend for a list of stocks by getting its sma50, sma100, ema12, ema26, and macd
+    LEGACY helper: fetch raw trend indicators (SMA/EMA/MACD) for context.
+    For production trend decisioning, use Pillar 2 (`pillar2_trend_signal_api`) as
+    the canonical source of signal/score/confidence.
     Arg:
         tickers: list[str] - A list of tickers to find its trend.
         ohlcv: dict - A dictionary of tickers which including its ohlcv.
@@ -133,7 +135,7 @@ def trend_follow(tickers: List[str], ohlcv: Dict) -> Dict:
                 macd_df = ta.macd(close)
                 macd_latest = macd_df['MACD_12_26_9'].iloc[-1] if macd_df is not None else None
                 
-                result={
+                result[ticker] = {
                     "Ticker": ticker,
                     "SMA50_lastest": sma50_latest.item(),
                     "SMA_100_lastest": sma100_latest.item(),
@@ -178,7 +180,7 @@ def mean_reversion(tickers: List[str], ohlcv: Dict) -> Dict:
                 
                 
                 
-                result={
+                result[ticker] = {
                     "Ticker": ticker,
                     "RSI": rsi_latest.item(),
                     "Bollinger Bands": {

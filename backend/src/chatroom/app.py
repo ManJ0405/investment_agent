@@ -30,16 +30,13 @@ if prompt:
 
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            
-            st.session_state.messages.append({"role": "user", "content": prompt})
-            
             langchain_messages = []
             for m in st.session_state.messages:
                 if m["role"] == "user":
                     langchain_messages.append(HumanMessage(content=m["content"]))
                 elif m["role"] == "assistant":
                     langchain_messages.append(AIMessage(content=m["content"]))
-            
+
             result = agent.invoke(
                 {"messages": langchain_messages},
                 config={
@@ -47,7 +44,11 @@ if prompt:
                     "recursion_limit": 25,
                 },
             )
-            ai_reply = result["messages"][-1].content
+            ai_messages = [
+                m for m in result.get("messages", [])
+                if getattr(m, "type", None) == "ai"
+            ]
+            ai_reply = ai_messages[-1].content if ai_messages else "Sorry, I could not generate a reply."
             st.markdown(ai_reply)
             
     

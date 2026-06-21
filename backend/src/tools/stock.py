@@ -4,8 +4,17 @@ from yahooquery import Ticker
 from datetime import datetime
 import yfinance as yf
 import pandas as pd
-import psycopg
-from src.schemas.ticker_schema import IndexConstituentsInput, HistoricalPriceInput,TickerListInput, validate_historical_prices, validate_ticker_tool
+try:
+    import psycopg
+except ModuleNotFoundError:  # pragma: no cover - optional local dependency path
+    psycopg = None
+from schemas.ticker_schema import (
+    IndexConstituentsInput,
+    HistoricalPriceInput,
+    TickerListInput,
+    validate_historical_prices,
+    validate_ticker_tool,
+)
 from typing import List, Dict, Any
 import logging
 import os
@@ -16,7 +25,72 @@ project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..
 sys.path.insert(0, project_root)
 
 from db.init_db import make_dsn
-    
+
+
+def _load_hk_index_tickers_from_csv(index: str) -> list[str]:
+    csv_path = os.path.join(project_root, "db", "data", "HSI.csv")
+    if not os.path.exists(csv_path):
+        logger.warning("HK index fallback CSV not found at %s", csv_path)
+        return []
+    try:
+        frame = pd.read_csv(csv_path)
+        subset = frame[frame["index_name"].astype(str).str.upper() == index]
+        tickers = subset["ticker"].dropna().astype(str).str.strip().tolist()
+        return tickers
+    except Exception as e:
+        logger.warning("Failed to read HK fallback CSV: %s", e)
+        return []
+
+
+def _normalize_column_name(column: Any, ticker: str) -> str:
+    """Convert pandas column labels (including MultiIndex tuples) to plain strings."""
+    if isinstance(column, tuple):
+        parts = [str(p) for p in column if p not in ("", None)]
+        if not parts:
+            return "value"
+        # yfinance can include ticker as one MultiIndex level.
+        filtered = [p for p in parts if p != ticker]
+        if filtered:
+            parts = filtered
+        return parts[-1]
+    if column is None:
+        return "value"
+    return str(column)
+
+
+def _history_records_for_ticker(data: pd.DataFrame, ticker: str, multi_ticker: bool) -> list[dict[str, Any]]:
+    """Return normalized OHLCV records with string keys for one ticker."""
+    frame = data[ticker] if multi_ticker else data
+    if frame is None or frame.empty:
+        return []
+
+    normalized = frame.copy()
+    if isinstance(normalized.columns, pd.MultiIndex):
+        normalized.columns = [_normalize_column_name(c, ticker) for c in normalized.columns]
+
+    normalized = normalized.reset_index()
+    normalized.columns = [_normalize_column_name(c, ticker) for c in normalized.columns]
+
+    # Keep key naming stable for downstream schemas/tools.
+    rename_map = {}
+    for col in normalized.columns:
+        low = col.lower()
+        if low in {"datetime", "date", "index"}:
+            rename_map[col] = "Date"
+        elif low == "open":
+            rename_map[col] = "Open"
+        elif low == "high":
+            rename_map[col] = "High"
+        elif low == "low":
+            rename_map[col] = "Low"
+        elif low == "close":
+            rename_map[col] = "Close"
+        elif low in {"adj close", "adj_close"}:
+            rename_map[col] = "Adj Close"
+        elif low == "volume":
+            rename_map[col] = "Volume"
+    normalized = normalized.rename(columns=rename_map)
+    return normalized.to_dict(orient="records")
 
 @tool(args_schema=IndexConstituentsInput)
 @validate_ticker_tool(schema_class=IndexConstituentsInput)    
@@ -54,21 +128,32 @@ def fetch_index_tickers(index: str) -> list[str]:
         logger.info(f'Fetching {index} tickers...')
         tickers = []
         if index == "HSI" or index == "HSTECH":
-            sql = "SELECT ticker FROM constituents WHERE index_name = %s"
-            dsn = make_dsn()
-            with psycopg.connect(dsn) as conn:
-                with conn.cursor() as cur:
-                    cur.execute(sql, (index,))
-                    result = cur.fetchall()
-                    for row in result:
-                        tickers.append(row[0])
+            if psycopg is not None:
+                try:
+                    sql = "SELECT ticker FROM constituents WHERE index_name = %s"
+                    dsn = make_dsn()
+                    with psycopg.connect(dsn) as conn:
+                        with conn.cursor() as cur:
+                            cur.execute(sql, (index,))
+                            result = cur.fetchall()
+                            for row in result:
+                                tickers.append(row[0])
+                except Exception as e:
+                    logger.warning(
+                        "DB fetch for %s failed (%s), fallback to local CSV",
+                        index,
+                        e,
+                    )
+                    tickers = _load_hk_index_tickers_from_csv(index)
+            else:
+                tickers = _load_hk_index_tickers_from_csv(index)
         else:
             stock_data = PyTickerSymbols()
             logger.info(f'Fetching {index} tickers...')
             stock_info = stock_data.get_stocks_by_index(index)
             for item in stock_info:
                 tickers.append(item['symbol'])
-            
+
         return tickers
     except Exception as e:
         logger.error(f"Error fetching {index} tickers: {e}")
@@ -102,10 +187,10 @@ def fetch_stock_history_data(tickers: List[str], period: str = "6mo", interval: 
         )
         
         result = {}
+        multi_ticker = len(tickers) > 1
         for ticker in tickers:
             try:
-                df = data[ticker] if len(tickers) > 1 else data
-                result[ticker] = df.reset_index().to_dict(orient="records")
+                result[ticker] = _history_records_for_ticker(data, ticker, multi_ticker)
             except KeyError:
                 result[ticker] = {"error": f"No data for {ticker}"}
         
@@ -198,7 +283,7 @@ def fetch_fundamental_data_and_news(tickers: list[str]) -> list[dict]:
             except Exception as e:
                 logger.warning(f'Fail to fetch news for {t}.')
                 item["news"] = []
-                item["state"] = "partical" if item["status"] == "success" else "error"
+                item["state"] = "partical" if item["state"] == "success" else "error"
                 item["error"] = f'Fail to fetch news: str{e}'
                 
             result.append(item)

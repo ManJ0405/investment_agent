@@ -1,7 +1,7 @@
 import psycopg
 import os
 import logging
-from init_db import make_dsn
+from .init_db import make_dsn
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
