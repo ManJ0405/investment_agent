@@ -1,0 +1,324 @@
+handle,kol_name,user_id,post_id,created_at,text,hashtags,urls,url,contains_cashtag,matched_keywords,event_bucket,cashtags
+zerohedge,ZeroHedge,18856867,2057119838179369297,2026-05-20T15:22:43+00:00,"RT @JavierBlas: Say whatever you want about US President Donald Trump, but admit he's really good at jawboning the oil market. Bigly good a…",[],[],https://x.com/zerohedge/status/2057119838179369297,False,oil,trade_geopolitics_commodities,
+zerohedge,ZeroHedge,18856867,2057119444187398541,2026-05-20T15:21:09+00:00,"here we go again
+
+*TRUMP SAYS US IN 'FINAL STAGES' OF TALKS WITH IRAN: POOL REPORT
+
+*US 10-YEAR YIELD FALLS 10 BASIS POINTS ON DAY TO 4.56%",[],[],https://x.com/zerohedge/status/2057119444187398541,False,"10-year,yield",macro_policy,
+zerohedge,ZeroHedge,18856867,2057110625529020811,2026-05-20T14:46:07+00:00,"Oil Prices Extend Decline After The Largest Crude Inventory Drawdown In History, Cushing 'Tank Bottoms' Loom https://t.co/bRsOwR0Vxm",[],"[{""display_url"": ""zerohedge.com/energy/oil-pri…"", ""expanded_url"": ""https://www.zerohedge.com/energy/oil-prices-extend-decline-after-huge-inventory-draws-record-spr-drain"", ""indices"": [109, 132], ""url"": ""https://t.co/bRsOwR0Vxm""}]",https://x.com/zerohedge/status/2057110625529020811,False,"drawdown,oil","market_risk,trade_geopolitics_commodities",
+zerohedge,ZeroHedge,18856867,2057108864605069727,2026-05-20T14:39:07+00:00,"Oil Prices Extend Decline After Huge Inventory Draws, Record SPR Drain https://t.co/bRsOwR0Vxm",[],"[{""display_url"": ""zerohedge.com/energy/oil-pri…"", ""expanded_url"": ""https://www.zerohedge.com/energy/oil-prices-extend-decline-after-huge-inventory-draws-record-spr-drain"", ""indices"": [71, 94], ""url"": ""https://t.co/bRsOwR0Vxm""}]",https://x.com/zerohedge/status/2057108864605069727,False,oil,trade_geopolitics_commodities,
+DeItaone,Walter Bloomberg,2704294333,2057121075796865235,2026-05-20T15:27:38+00:00,"YIELD ON 10-YR U.S. TREASURY NOTE LAST DOWN 8.2 BASIS POINTS AT 4.588%
+
+US TREASURY YIELDS FALL AS US-IRAN DEAL SEEN CLOSER, 2-YEAR YIELD LAST DOWN 7.8 BASIS POINTS AT 4.045%",[],[],https://x.com/DeItaone/status/2057121075796865235,False,"treasury,yield",macro_policy,
+DeItaone,Walter Bloomberg,2704294333,2057119013424009222,2026-05-20T15:19:26+00:00,US 10-YEAR YIELD FALLS 10 BASIS POINTS ON DAY TO 4.56%,[],[],https://x.com/DeItaone/status/2057119013424009222,False,"10-year,yield",macro_policy,
+DeItaone,Walter Bloomberg,2704294333,2057118918897029391,2026-05-20T15:19:04+00:00,"IRAN CLAIMS CONTROL OVER STRAIT OF HORMUZ SECURITY
+
+An Iranian official says 26 oil tankers and vessels transited the Strait of Hormuz safely under monitoring by the Islamic Revolutionary Guard Corps (IRGC).
+
+The official added that maritime traffic is coordinated with IRGC oversight and described Gulf security as a “red line” for Iran.",[],[],https://x.com/DeItaone/status/2057118918897029391,False,oil,trade_geopolitics_commodities,
+DeItaone,Walter Bloomberg,2704294333,2057118742253883895,2026-05-20T15:18:22+00:00,"OIL CRUDE FUTURES EXTEND LOSSES, PRICES DOWN AROUND 7%",[],[],https://x.com/DeItaone/status/2057118742253883895,False,oil,trade_geopolitics_commodities,
+DeItaone,Walter Bloomberg,2704294333,2057112116281106840,2026-05-20T14:52:02+00:00,"TARIFF REFUNDS SEEN AS DISINFLATIONARY BOOST
+
+BofA Securities says tariff refunds could act as a modest disinflationary force by cushioning higher energy and shipping costs for importers.
+
+The bank adds that any consumer impact is likely to come through slower price increases rather than direct cash benefits.",[],[],https://x.com/DeItaone/status/2057112116281106840,False,tariff,trade_geopolitics_commodities,
+DeItaone,Walter Bloomberg,2704294333,2057110799856878020,2026-05-20T14:46:48+00:00,"🇪🇺ECB SET FOR JUNE HIKE, JULY MOVE UNCERTAIN
+
+Sources say the European Central Bank is close to sealing a June rate hike decision, driven by persistent energy-driven inflation near 3%, well above its 2% target.
+
+However, officials are expected to avoid committing to a July follow-up, citing weak growth, uncertain energy prices, and limited signs of second-round inflation effects.
+
+While markets price multiple future hikes, policymakers see scope to pause after June and reassess in September, depending on inflation and geopolitical developments.",[],[],https://x.com/DeItaone/status/2057110799856878020,False,"rate hike,inflation",macro_policy,
+DeItaone,Walter Bloomberg,2704294333,2057110627319996741,2026-05-20T14:46:07+00:00,"ECB RATE HIKE VERY LIKELY IN JUNE AS INFLATION OUTLOOK MOVING TOWARDS ADVERSE SCENARIO, SOURCES SAY",[],[],https://x.com/DeItaone/status/2057110627319996741,False,"rate hike,inflation",macro_policy,
+DeItaone,Walter Bloomberg,2704294333,2057109932940366031,2026-05-20T14:43:21+00:00,"INFLATIONARY SHOCKS REDUCE U.S. TREASURYS' SAFE-HAVEN STATUS: NOMURA ASSET MANAGEMENT INTERNATIONAL
+
+U.S. TREASURYS CAN BEHAVE MORE LIKE RISK ASSETS DURING INFLATIONARY SHOCKS: NOMURA ASSET MANAGEMENT INTERNATIONAL
+
+JUMP IN ENERGY COSTS EFFECTIVELY REMOVES PROSPECT OF NEAR-TERM FED RATE CUTS -- INTERVIEW",[],[],https://x.com/DeItaone/status/2057109932940366031,False,fed,macro_policy,
+DeItaone,Walter Bloomberg,2704294333,2057107449513947287,2026-05-20T14:33:29+00:00,"BRENT CRUDE FUTURES EXTEND LOSSES, DOWN 4.3%, AFTER EIA STORAGE REPORT
+
+U.S. CRUDE FUTURES EXTEND LOSSES, DOWN 4.1%, AFTER EIA STORAGE REPORT",[],[],https://x.com/DeItaone/status/2057107449513947287,False,brent,trade_geopolitics_commodities,
+DeItaone,Walter Bloomberg,2704294333,2057106647714066874,2026-05-20T14:30:18+00:00,DOE: US CRUDE OIL STOCKS -7.863M BBL IN WK; SEEN -3M BBL,[],[],https://x.com/DeItaone/status/2057106647714066874,False,oil,trade_geopolitics_commodities,
+realDonaldTrump,Donald j. Trump,25073877,2004012442427277591,2025-12-25T02:12:53+00:00,"Merry Christmas to all, including the Radical Left Scum that is doing everything possible to destroy our Country, but are failing badly. We no longer have Open Borders, Men in Women’s Sports, Transgender for Everyone, or Weak Law Enforcement. What we do have is a Record Stock Market and 401K’s, Lowest Crime numbers in decades, No Inflation, and yesterday, a 4.3 GDP, two points better than expected. Tariffs have given us Trillions of Dollars in Growth and Prosperity, and the strongest National Security we have ever had. We are respected again, perhaps like never before. God Bless America!!! President DJT",[],[],https://x.com/realDonaldTrump/status/2004012442427277591,False,"stock market,inflation,gdp","us_equities_index,macro_policy",
+KobeissiLetter,The Kobeissi Letter,3316376038,2057119163424879047,2026-05-20T15:20:02+00:00,"BREAKING: US oil prices fall over -7% to $97/barrel after President Trump says the US is in ""final stages"" of talks with Iran. https://t.co/9i8FDFcUCb",[],[],https://x.com/KobeissiLetter/status/2057119163424879047,False,oil,trade_geopolitics_commodities,
+KobeissiLetter,The Kobeissi Letter,3316376038,2057095585497297109,2026-05-20T13:46:21+00:00,"Tokenized assets have never been more popular.
+
+The distributed asset value of real-world tokenized assets is now up to a record $33.8 billion.
+
+This represents a +1,600% increase over the last 2 years and adoption is only accelerating.
+
+Growth in these assets gained momentum after onchain platforms like Jupiter began listing tokenized assets through partnerships with Securitize, xStocks, and Ondo finance, prompting +34% week-over-week volume growth.
+
+Meanwhile, Bloomberg reported this week that the SEC is leaning toward allowing the trading of tokenized assets in a ""surprise move.""
+
+This would mark one of the US' biggest shifts into crypto infrastructure yet.
+
+Tokenization is taking over.",[],[],https://x.com/KobeissiLetter/status/2057095585497297109,False,sec,regulatory,
+KobeissiLetter,The Kobeissi Letter,3316376038,2057076371609014627,2026-05-20T12:30:00+00:00,"BREAKING: Donald Trump Jr's investment firm, 1789 Capital, has seen its assets under management surge by +1,650% over the last year, to $3.5 billion, per FT.
+
+Details include:
+
+1. The firm is building an investment empire around ""patriotic capitalism"" and targets $10 billion in AUM
+
+2. In recent pitches, the firm is being described as the ""new Carlyle Group""
+
+3. Over the past year, 1789 Capital has bought stakes in some of the most sought-after private companies including Ramp, Deel, Crusoe, Groq, and Reflection AI
+
+4. Recent successful investments include investments in Cerebras, SpaceX, Anduril, and xAI under @DonaldJTrumpJr's guidance
+
+1789 Capital is now one of America's fastest growing investment funds.",[],[],https://x.com/KobeissiLetter/status/2057076371609014627,False,guidance,earnings_corporate,
+KobeissiLetter,The Kobeissi Letter,3316376038,2057065703459475967,2026-05-20T11:47:36+00:00,"BREAKING: China banned Nvidia's, $NVDA, RTX 5090D V2 gaming chip while Jensen Huang was visiting China with President Trump last week, per FT.
+
+Details include:
+
+1. The chip was added to a list of banned goods at China’s customs checkpoints last Friday
+
+2. The move comes as the Chinese government wants to support domestic chipmakers such as Huawei and Cambricon as they catch up to US rivals
+
+3. The RTX 5090D V2 was introduced last August specifically to comply with US export controls
+
+4. It was aimed at Chinese gamers and 3D animators but it has also been bought by AI developers
+
+The AI arms race continues to ramp up.",[],[],https://x.com/KobeissiLetter/status/2057065703459475967,True,"nvidia,chip",semis_tech_infra,$NVDA
+KobeissiLetter,The Kobeissi Letter,3316376038,2056930231080882615,2026-05-20T02:49:17+00:00,"US oil refineries are producing more jet fuel than ever before:
+
+The jet fuel output yield at US refineries is up to a record 12.7%, up +2.2 percentage points since the Iran War began.
+
+This measures the proportion of each barrel of crude oil that a refinery converts into aviation fuel.
+
+As a result, in volume terms, US refiners are producing ~250,000 more barrels of jet fuel per day than a year ago.
+
+This comes as the effective closure of the Strait of Hormuz has cut off ~400,000 barrels of aviation fuel per day.
+
+The global jet fuel market accounts for less than 7.5% of total oil demand, meaning relatively minor shifts in refining output or airline consumption can produce a significant impact on supply and prices.
+
+US refiners are emerging as the main beneficiaries of a tightening jet fuel market.",[],[],https://x.com/KobeissiLetter/status/2056930231080882615,False,"yield,oil","macro_policy,trade_geopolitics_commodities",
+KobeissiLetter,The Kobeissi Letter,3316376038,2056912098513371556,2026-05-20T01:37:14+00:00,"BREAKING: Meta, $META, has begun making 8,000 global job cuts, starting with employees in Singapore.",[],[],https://x.com/KobeissiLetter/status/2056912098513371556,True,job cuts,earnings_corporate,$META
+KobeissiLetter,The Kobeissi Letter,3316376038,2056889780386845038,2026-05-20T00:08:33+00:00,"This is unusual:
+
+The S&P 500 has now seen 29 trading days where the index moved opposite to overall market breadth, the most through the first 93 trading sessions of any year on record.
+
+In other words, on many days when the S&P 500 closed higher, more stocks actually finished lower than higher, and vice versa when the index closed down.
+
+This is also the 2nd year on record with more than 20 such sessions through this point in the year.
+
+This comes as only 10 stocks have accounted for ~70% of the S&P 500’s 16% gain since the March 30th bottom.
+
+At this pace, the market will experience 79 sessions like this until the year ends, setting an all-time high.
+
+By comparison, the current full-year record is 57 trading days seen in 2024 and 2025.
+
+A handful of tech stocks are driving the entire market.",[],[],https://x.com/KobeissiLetter/status/2056889780386845038,False,"breadth,s&p 500,s&p","us_equities_index,market_risk",
+KobeissiLetter,The Kobeissi Letter,3316376038,2056848648294830155,2026-05-19T21:25:06+00:00,"The global yield crisis is accelerating:
+
+10+ year government bond yields of G7 countries are up to ~4.7%, the highest since 2004.
+
+This is now ~0.5 percentage points above the 2008 Financial Crisis peak.
+
+G7 bond yields are also 8 TIMES above the 2020 pandemic low of ~0.5%.
+
+The surge comes amid renewed inflationary pressures from rising energy prices, persistently large government deficits, and the end of central bank QE programs.
+
+As a result, investors are demanding higher compensation for holding long-term government debt.
+
+The global government debt crisis is becoming even more expensive.",[],[],https://x.com/KobeissiLetter/status/2056848648294830155,False,"yield,qe",macro_policy,
+KobeissiLetter,The Kobeissi Letter,3316376038,2056832745855193523,2026-05-19T20:21:55+00:00,"By far, the most incredible part about this market is the fact that the base case now shows incoming Fed Chair Kevin Warsh HIKING rates as his first policy move.
+
+These are market-implied interest rate futures, actively betting that rate hikes are coming next.
+
+President Trump spent the last 12 months threatening to fire Jerome Powell for not cutting rates.
+
+He also said cutting interest rates was a “requirement” for the next Fed Chair and was actively calling for 1% interest rates.
+
+Is Kevin Warsh actually about to raise interest rates after what happened over the last 12 months?",[],[],https://x.com/KobeissiLetter/status/2056832745855193523,False,"powell,fed",macro_policy,
+KobeissiLetter,The Kobeissi Letter,3316376038,2056788474385076470,2026-05-19T17:26:00+00:00,"BREAKING: Japan's 10Y Government Bond Yield surges above 2.80% for the first time in history.
+
+This truly is one of the most insane charts ever seen. https://t.co/qP1VAR86Bf",[],[],https://x.com/KobeissiLetter/status/2056788474385076470,False,yield,macro_policy,
+KobeissiLetter,The Kobeissi Letter,3316376038,2056770217498354153,2026-05-19T16:13:27+00:00,"RT @TKL_Adam: American consumers are now facing 7%+ mortgage rates, 4%+ inflation, and a 30% loss in the purchasing power of the US Dollar…",[],[],https://x.com/KobeissiLetter/status/2056770217498354153,False,inflation,macro_policy,
+KobeissiLetter,The Kobeissi Letter,3316376038,2056765531957481557,2026-05-19T15:54:50+00:00,"Bond markets are flashing red.
+
+Today, the US 30Y Note Yield officially hit its highest level since July 2007, at 5.19%.
+
+This will soon become Americans’ biggest problem, yet the vast majority do not even know it is happening.
+
+What is happening? Let us explain.
+
+(a thread) https://t.co/Yyi1R00DPV",[],[],https://x.com/KobeissiLetter/status/2056765531957481557,False,yield,macro_policy,
+MrMBrown,Michael Brown,380185975,2056728116198879545,2026-05-19T13:26:09+00:00,When the 30-year yield hits post-GFC highs 3 days before you start the job... https://t.co/26Hynwpgi5,[],[],https://x.com/MrMBrown/status/2056728116198879545,False,yield,macro_policy,
+MrMBrown,Michael Brown,380185975,2056647346188906887,2026-05-19T08:05:12+00:00,"RT @PiQSuite: 💦 Morning Blast with @MrMBrown
+
+· UK jobs report: Tragic
+
+· Trump calls off Iran strike
+
+· Japan piss $64bn up the wall
+
+· St…",[],[],https://x.com/MrMBrown/status/2056647346188906887,False,jobs report,macro_policy,
+MrMBrown,Michael Brown,380185975,2056617086823145498,2026-05-19T06:04:58+00:00,"UK lab mkt still soggy with an increasing margin of slack...private sector earnings running at levels consistent with 2% inflation target over m/t...UK economy not one that needs tighter monetary policy, especially amid domestic uncertainty...BoE on hold all yr remains likely...",[],[],https://x.com/MrMBrown/status/2056617086823145498,False,"inflation,earnings","macro_policy,earnings_corporate",
+MrMBrown,Michael Brown,380185975,2056255703283601860,2026-05-18T06:08:57+00:00,Finally something sensible from the Treasury https://t.co/KsM9f9sogl,[],[],https://x.com/MrMBrown/status/2056255703283601860,False,treasury,macro_policy,
+BrianFeroldi,Brian Feroldi,61558281,2056482332547178910,2026-05-18T21:09:30+00:00,"High-quality revenue: 
+→Recurring 
+→High Margin 
+→Recession-Proof 
+→Becomes Cash 
+
+Low-quality revenue: 
+→One Time 
+→Low Margin 
+→Cyclical 
+→ Become Accounts Receivable
+
+High-quality revenue is 10x more valuable than low-quality revenue",[],[],https://x.com/BrianFeroldi/status/2056482332547178910,False,"recession,revenue","macro_policy,earnings_corporate",
+CathieDWood,Cathie Wood,2361631088,2052910169424805980,2026-05-09T00:35:00+00:00,"One of the more interesting signals in the data right now is that the yield curve continues to flatten despite a significant increase in oil prices on a trailing three-month basis. Historically, in a more traditional economic cycle, an energy shock that is being monetized by the Federal Reserve would steepen the curve, not flatten it. The Fed is not monetizing this energy shock.
+
+In our view, the bond market may be beginning to discount something much more powerful: the deflationary impact of artificial intelligence and technologically enabled productivity gains across the economy.
+
+The cost to train AI models is falling dramatically. Inference costs are collapsing even more rapidly. At the same time, productivity growth appears to be accelerating beneath the surface of the official data, while unit labor costs remain remarkably subdued.
+
+Much of the market narrative today is centered around tariffs, deficits, and structurally higher inflation. Yet the underlying signals increasingly suggest that disinflationary forces tied to innovation are building momentum.
+
+We believe inflation is likely to surprise on the low side over the next 6–9 months. If that proves correct, the implications for interest rates and long-duration equities could be profound.
+
+Historically, the market has tended to underestimate the speed and scale at which technologically driven innovation can reshape the macroeconomic environment.
+
+I share my thoughts on this month's episode of In The Know.",[],[],https://x.com/CathieDWood/status/2052910169424805980,False,"artificial intelligence,yield curve,inflation,equities,yield,oil,fed","us_equities_index,macro_policy,trade_geopolitics_commodities,semis_tech_infra",
+CathieDWood,Cathie Wood,2361631088,2052429257133977951,2026-05-07T16:44:01+00:00,"RT @ARKInvest: This week's Brainstorm: Our comprehensive analysis of mega-cap tech companies ⬇️
+
+0:00 — $700 B in CapEx, $1.5T in cloud bac…",[],[],https://x.com/CathieDWood/status/2052429257133977951,False,mega-cap,us_equities_index,
+CathieDWood,Cathie Wood,2361631088,2051381391489683801,2026-05-04T19:20:11+00:00,"The May jobs report is coming at a critical point for monetary policy. I'll be sharing my analysis on what the data signals for rates, growth, and more in this month's In The Know later this week. What else would you like me to address?",[],[],https://x.com/CathieDWood/status/2051381391489683801,False,jobs report,macro_policy,
+CathieDWood,Cathie Wood,2361631088,2045222315915440378,2026-04-17T19:26:13+00:00,"RT @ARK_Funds: Our Q1 webinar is live. Our team covers OpenAI in ARK ETFs, the SpaceX IPO and orbital data centers, inflation, cybersecurit…",[],[],https://x.com/CathieDWood/status/2045222315915440378,False,inflation,macro_policy,
+CathieDWood,Cathie Wood,2361631088,2044152171025818061,2026-04-14T20:33:50+00:00,"RT @ARKInvest: If productivity accelerates and inflation continues to ease, the setup for equities could be powerful. 
+AI remains the key d…",[],[],https://x.com/CathieDWood/status/2044152171025818061,False,"inflation,equities","us_equities_index,macro_policy",
+howardlindzon,Howard Lindzon,7517052,2056451900074013002,2026-05-18T19:08:34+00:00,"RT @Stocktwits: $NVDA Day 🔜    
+
+Nvidia reports earnings on Wednesday... What sticks out to you? 💭
+   
+📊 Expected Revenue: $78.6B 
+💰 Expect…",[],[],https://x.com/howardlindzon/status/2056451900074013002,True,"earnings,revenue,nvidia","earnings_corporate,semis_tech_infra",$NVDA
+howardlindzon,Howard Lindzon,7517052,2056215092274810932,2026-05-18T03:27:35+00:00,RT @ivanhoff: Momentum Monday - Time for a Consolidation or a Pullback? @MarketSurge @howardlindzon https://t.co/o15s6AXdvF $QQQ $SMH $TLT…,[],"[{""display_url"": ""ivanhoff.com/2026/05/17/tim…"", ""expanded_url"": ""https://ivanhoff.com/2026/05/17/time-for-a-consolidation-or-a-pullback/"", ""indices"": [100, 123], ""url"": ""https://t.co/o15s6AXdvF""}]",https://x.com/howardlindzon/status/2056215092274810932,True,qqq,us_equities_index,"$QQQ,$SMH,$TLT"
+howardlindzon,Howard Lindzon,7517052,2054619311759634850,2026-05-13T17:46:31+00:00,"MABA...Make America Bet Again
+
+So on point for my Degenerate Economy
+
+White House Priorities
+
+War
+Increase Inflation
+Raise Interest Rates
+Make Betting Great Again
+Raise home prices/but build a ballroom",[],[],https://x.com/howardlindzon/status/2054619311759634850,False,inflation,macro_policy,
+howardlindzon,Howard Lindzon,7517052,2054617428894593128,2026-05-13T17:39:02+00:00,"my friend @om has gotten me in sync with ai and how to position my portfolio 
+
+AI is the new killer app as Netflix was last cycle ...because of what it Uploads
+
+https://t.co/4fhSdHt7O8
+
+No wonder $goog and $amzn and $docn  broke out so violently and $tsla chases the cloud",[],"[{""display_url"": ""om.co/2026/05/13/ai-…"", ""expanded_url"": ""https://om.co/2026/05/13/ai-is-the-new-netflix/"", ""indices"": [161, 184], ""url"": ""https://t.co/4fhSdHt7O8""}]",https://x.com/howardlindzon/status/2054617428894593128,True,,,"$GOOG,$AMZN,$DOCN,$TSLA"
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2056877795276476883,2026-05-19T23:20:55+00:00,No AI data center is worth losing this https://t.co/vifULvcjGh,[],[],https://x.com/FluentInFinance/status/2056877795276476883,False,data center,semis_tech_infra,
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2056811770342478248,2026-05-19T18:58:34+00:00,"Bond markets are melting down right now.
+
+The US 30-year Treasury yield just hit 5.18%. We have not seen borrowing costs this high in almost 20 years.
+
+At the same time, Japan's 30-year yield just hit 4.17%, the highest in that country's recorded history. And Japan's 10-year broke above 2.80% for the first time, ever.
+
+Two of the world's largest bond markets. Both at historic extremes.
+
+Japan holds roughly $1.1 Trillion in US Treasuries. If Japan starts selling those bonds to stabilize its own market, US yields go even higher.
+
+As US yields rise, the government pays more interest on its $36 Trillion debt. To cover that interest, it borrows more. More borrowing pushes yields even higher. It's a self-feeding loop. And the Government has no real plan to break it.
+
+I think we're entering the most aggressive surge in inflation and yields since the 1970s.
+
+Many businesses only survived the last decade because debt was cheap. With borrowing costs exploding right now, many companies will file for bankruptcy.
+
+This is getting ugly. We're watching the biggest financial shift since 2007.",[],[],https://x.com/FluentInFinance/status/2056811770342478248,False,"inflation,treasury,10-year,yield",macro_policy,
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2055394691047211477,2026-05-15T21:07:36+00:00,"The medical clinic I've been visiting the last 10 years was bought out by private equity.
+
+They cut costs so aggressively that they could not even keep a full time doctor on staff.
+
+Then they cut the staff. They replaced experienced nurses with cheaper workers.
+
+The place fell apart in under a year.
+
+Labor is the highest cost in any healthcare practice. Cut it, and the margins improve on paper.
+
+It is wild how fast a successful business gets destroyed by this model.
+
+PE acquisitions often use leveraged buyouts — meaning the debt used to buy the practice gets loaded onto the practice itself. It services that debt from operating revenue while also generating investor returns.
+
+Healthcare is a goldmine for private equity. In 2024, private equity completed 1,136 healthcare deals in the US. People get sick no matter what the economy is doing. It's guaranteed cash flow.
+
+The business model is simple. Buy a clinic. Load it up with debt. Cut costs to make the profit margin look amazing. Sell it to someone else in about 5 years.
+
+If the clinic goes bankrupt from all that debt later on? The investors don't care. They already made their money.
+
+Why is this happening? Greed.",[],[],https://x.com/FluentInFinance/status/2055394691047211477,False,revenue,earnings_corporate,
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2055347623918281171,2026-05-15T18:00:34+00:00,"Something is breaking in the bond market. Most people haven't noticed yet.
+
+The interest rate on the US 10-Year Note just jumped above 4.59%. We haven't seen these levels in about a year. 
+
+Even crazier, the 30-Year Treasury yield hit 5.12%. That's the highest it has been since right before the 2008 Great Financial Crisis.
+
+And it's not just the US. In the UK, the 30-year bond yield hit 5.85%. It's the highest level since March 1998.
+
+Kevin Warsh is seen as more hawkish than Powell, meaning he's more likely to raise rates or hold them high to fight inflation. The bond market knows this.
+
+Bonds are the real engine of the global economy. When they break, everything else follows.",[],[],https://x.com/FluentInFinance/status/2055347623918281171,False,"inflation,treasury,10-year,powell,yield",macro_policy,
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2055055191150350587,2026-05-14T22:38:33+00:00,"100,000+ tech layoffs in 130 days.
+
+Most people think the tech layoff wave is over. It's not. 100,000+ jobs have already been cut in 2026. And we're only 4 months in.
+
+This isn't a layoff cycle. It's a STRUCTURAL SHIFT. https://t.co/NlIYYMNwmz",[],[],https://x.com/FluentInFinance/status/2055055191150350587,False,layoff,earnings_corporate,
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2054981472390431218,2026-05-14T17:45:37+00:00,"PRESIDENT TRUMP JUST REVEALED HIS LATEST STOCK TRADES.
+
+He filed new financial reports with the Office of Government Ethics.
+
+On May 8th he told the whole country to 'Go buy Dell.' 
+
+The stock shot up 12% that day.
+
+He owned $DELL the whole time.
+
+Some of the other buys include: Intel $INTC, Palantir $PLTR, Sandisk $SNDK, and NVIDIA $NVDA.
+
+Politicians have made public statements that sent prices up or down.
+
+They've sat on committees that set policy for entire industries they invested in.
+
+They've voted on legislation that directly moved stocks they held. 
+
+And none of it is technically illegal.",[],[],https://x.com/FluentInFinance/status/2054981472390431218,True,nvidia,semis_tech_infra,"$DELL,$INTC,$PLTR,$SNDK,$NVDA"
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2054965067809001851,2026-05-14T16:40:26+00:00,"The US dollar lost 30% of its value over the last 6 years.
+
+Think about what that actually means.
+
+$100K in 2018 is equivalent to $70K today.
+
+When the government prints more money, your dollars lose their value.
+
+You pay more for the same things. Groceries. Rent. Gas.
+
+Between 2020 and 2023, the U.S. government printed $6+ trillion into the economy. The Fed kept interest rates near zero for years. It felt like free money.
+
+But there's no such thing as free money.
+
+When you flood the economy with cash, each dollar buys less. More dollars chasing the same goods. Prices rise. Your purchasing power shrinks. It's basic supply and demand.
+
+The worst part? Wages don't keep up.
+
+Here's what you do long-term:
+
+1. S&P 500 Index Fund in your Roth IRA (~10%/year historically, tax-free)
+2. Real estate (beats inflation over time)
+3. Hard assets & commodities
+4. Invest in your skills and income potential",[],[],https://x.com/FluentInFinance/status/2054965067809001851,False,"inflation,s&p 500,s&p,fed","us_equities_index,macro_policy",
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2054595026194215115,2026-05-13T16:10:01+00:00,"Realizing that inflation hit its highest reading since 2022 just to keep the Strait of Hormuz open… which was already open before all of this. 
+
+That the problem never existed to begin with. https://t.co/1HHrROqfO3",[],[],https://x.com/FluentInFinance/status/2054595026194215115,False,inflation,macro_policy,
+FluentInFinance,Andrew Lokenauth | TheFinanceNewsletter.com,1370163747973632003,2054561310465994903,2026-05-13T13:56:02+00:00,"JUST IN: US April PPI inflation RISES to 6.0% (above expectations of 4.9%.)
+
+Core PPI inflation RISES to 5.2% (above expectations of 4.3%.)
+
+PPI inflation is now at its highest levels since 2022.
+
+I’m sure everything is fine.",[],[],https://x.com/FluentInFinance/status/2054561310465994903,False,"inflation,ppi",macro_policy,
