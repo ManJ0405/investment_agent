@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 from fastapi.testclient import TestClient
 
-from api.app import app
+from src.api.app import app
 
 
 def _payload(length: int = 80) -> dict:
