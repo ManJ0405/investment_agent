@@ -133,6 +133,48 @@ class Ohlcv_input(TickerListInput):
                 if not data:
                     raise ValueError(f"ohlcv data is empty")
         return v
+
+# For RAG retrieval
+VALID_FORM_TYPES = frozenset({"10-K", "10-Q"})
+
+class RagRetrieveRequest(BaseModel):
+    query: str = Field(
+        ...,
+        description="A query to retrieve context.",
+        min_length=3, 
+        max_length=500
+    )
+    ticker: str | None = None
+    form_types: list[str] | None = None
+    top_k: int = Field(default=6, ge=1, le=20)
+
+    @field_validator("form_types", mode="before")
+    @classmethod
+    def normalize_form_types(cls, v):
+        if v is None:
+            return None
+        if isinstance(v, str):
+            v = [v]
+        normalized = []
+        for item in v:
+            key = item.strip().upper().replace("_", "-")
+            # allow "10K" -> "10-K"
+            if key == "10K":
+                key = "10-K"
+            if key == "10Q":
+                key = "10-Q"
+            normalized.append(key)
+        return normalized
+
+    @field_validator("form_types")
+    @classmethod
+    def validate_form_types(cls, v):
+        if v is None:
+            return None
+        invalid = [f for f in v if f not in VALID_FORM_TYPES]
+        if invalid:
+            raise ValueError(f"Invalid form_types: {invalid}. Allowed: 10-K, 10-Q")
+        return list(dict.fromkeys(v))  
                
     
    

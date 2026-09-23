@@ -32,6 +32,13 @@ From `backend/`:
 python scripts/rag_ingest_sec.py --ticker NVDA --ticker AAPL --max-filings 6
 ```
 
+Ingest all S&P 500 constituents (use `--limit` to test on a subset first):
+
+```bash
+python scripts/rag_ingest_sec.py --sp500 --max-filings 4
+python scripts/rag_ingest_sec.py --sp500 --limit 10 --max-filings 2
+```
+
 ## Retrieval Example
 
 ```python

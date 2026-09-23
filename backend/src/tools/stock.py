@@ -14,12 +14,15 @@ from schemas.ticker_schema import (
     TickerListInput,
     validate_historical_prices,
     validate_ticker_tool,
+    RagRetrieveRequest,
 )
 from typing import List, Dict, Any
 import logging
 import os
 import sys
 logger = logging.getLogger(__name__)
+
+from pillars.pillar8_rag.retrieve import retrieve_context
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.insert(0, project_root)
@@ -294,3 +297,18 @@ def fetch_fundamental_data_and_news(tickers: list[str]) -> list[dict]:
     except Exception as e:
         logger.error(f'Error fetching fundamential data: {e}')
         return []
+
+@tool(args_schema=RagRetrieveRequest)
+@validate_ticker_tool(schema_class=RagRetrieveRequest)
+def rag_retrieve(query: str, ticker: str | None = None, form_types: list[str] | None = None, top_k: int = 6) -> dict:
+    """
+    Retrieve context from RAG for a given query, ticker and form types.
+    Arg:
+        query: str - A query to retrieve context.
+        ticker: str | None - A ticker to retrieve context.
+        form_types: list[str] | None - A list of form types to retrieve context.
+        top_k: int - The number of top results to retrieve.
+    Returns:
+        dict - A dictionary of context for the given query, ticker and form types.
+    """
+    return retrieve_context(query, ticker, form_types, top_k)

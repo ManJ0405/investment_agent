@@ -341,3 +341,338 @@ Given your limited monthly budget, the most prudent approach is **diversificatio
 3.  **The Balanced Approach (Recommended):** Split your funds (e.g., 50% HK / 50% US) to capture both the regional growth story and the global technological innovation story, mitigating the risk of being overly exposed to one market's downturn.
 
 **Crucial Tip:** With a small, consistent monthly contribution, focus on **Dollar-Cost Averaging (DCA)**. Regardless of which market you choose, investing a fixed amount regularly helps smooth out the volatility of both the HK and US markets.
+2026-07-07 23:34:25,174 [INFO] Pulling model gemma4:e4b...
+2026-07-07 23:34:26,317 [INFO] Success
+2026-07-07 23:34:26,317 [INFO] Starting Streamlit Playground...
+2026-07-07 23:34:29,333 [INFO] Started Playground on http://localhost:8501
+2026-07-07 23:34:29,334 [INFO] Starting agent...
+2026-07-07 23:42:16,654 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:42:18,721 [INFO] Supervisor → next=fetcher (raw was 'fetcher')
+2026-07-07 23:42:18,722 [INFO] fetcher_node: in (messages=1, fetched=False)
+2026-07-07 23:42:18,722 [INFO] fetcher_node: scoped to explicit tickers ['NDVA']
+2026-07-07 23:42:18,723 [INFO] Fetching OHLCV...
+2026-07-07 23:42:19,706 [ERROR] HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: NDVA"}}}
+2026-07-07 23:42:20,165 [ERROR] $NDVA: possibly delisted; no price data found  (period=6mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-07 23:42:20,165 [ERROR] 
+1 Failed download:
+2026-07-07 23:42:20,167 [ERROR] ['NDVA']: possibly delisted; no price data found  (period=6mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-07 23:42:20,200 [INFO] Fetching fundamental data and news...
+2026-07-07 23:42:21,686 [ERROR] Error fetching fundamential data: 'str' object has no attribute 'reset_index'
+2026-07-07 23:42:22,111 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:42:22,120 [INFO] Supervisor → next=analyzer (raw was 'analyzer')
+2026-07-07 23:42:22,121 [INFO] analyzer_node: in (messages=2, has_analysis=False)
+2026-07-07 23:42:22,121 [ERROR] Error: 1 validation error for Ohlcv_input
+ohlcv
+  Value error, ohlcv['NDVA'] is empty [type=value_error, input_value={'NDVA': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-07-07 23:44:17,594 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:44:19,437 [INFO] Supervisor → next=fetcher (raw was 'fetcher')
+2026-07-07 23:44:19,438 [INFO] fetcher_node: in (messages=2, fetched=False)
+2026-07-07 23:44:19,438 [INFO] fetcher_node: scoped to explicit tickers ['NDVA']
+2026-07-07 23:44:19,438 [INFO] Fetching OHLCV...
+2026-07-07 23:44:19,814 [ERROR] HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: NDVA"}}}
+2026-07-07 23:44:19,619 [ERROR] $NDVA: possibly delisted; no price data found  (period=6mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-07 23:44:19,627 [ERROR] 
+1 Failed download:
+2026-07-07 23:44:19,627 [ERROR] ['NDVA']: possibly delisted; no price data found  (period=6mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-07 23:44:19,629 [INFO] Fetching fundamental data and news...
+2026-07-07 23:44:21,411 [ERROR] Error fetching fundamential data: 'str' object has no attribute 'reset_index'
+2026-07-07 23:44:21,643 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:44:24,207 [INFO] Supervisor → next=analyzer (raw was 'analyzer')
+2026-07-07 23:44:24,207 [INFO] analyzer_node: in (messages=3, has_analysis=False)
+2026-07-07 23:44:24,208 [ERROR] Error: 1 validation error for Ohlcv_input
+ohlcv
+  Value error, ohlcv['NDVA'] is empty [type=value_error, input_value={'NDVA': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-07-07 23:44:32,992 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:44:35,473 [INFO] Supervisor → next=fetcher (raw was 'fetcher')
+2026-07-07 23:44:35,474 [INFO] fetcher_node: in (messages=3, fetched=False)
+2026-07-07 23:44:35,474 [INFO] fetcher_node: scoped to explicit tickers ['NVDA']
+2026-07-07 23:44:35,475 [INFO] Fetching OHLCV...
+2026-07-07 23:44:35,616 [INFO] Fetching fundamental data and news...
+2026-07-07 23:44:38,144 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:44:38,157 [INFO] Supervisor → next=analyzer (raw was 'analyzer')
+2026-07-07 23:44:38,157 [INFO] analyzer_node: in (messages=4, has_analysis=False)
+2026-07-07 23:44:38,158 [INFO] Fetch mean reversion for tickers...
+2026-07-07 23:44:38,462 [INFO] Fetched mean reversion for tickers
+2026-07-07 23:44:38,464 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/v1/pillars/pillar2/trend-signal
+2026-07-07 23:44:39,266 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/v1/pillars/pillar2/trend-signal
+2026-07-07 23:44:39,266 [ERROR] Pillar2 API call failed for NVDA
+Traceback (most recent call last):
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/mandesko/miniconda3/lib/python3.13/http/client.py", line 1353, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mandesko/miniconda3/lib/python3.13/http/client.py", line 1113, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "/home/mandesko/miniconda3/lib/python3.13/http/client.py", line 1057, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mandesko/investment_agent/backend/src/tools/pillar2_api.py", line 73, in _request_pillar2
+    response = _http.request(
+        "POST",
+    ...<3 lines>...
+        timeout=_DEFAULT_TIMEOUT_SECONDS,
+    )
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ~~~~~~~~~~~~~~~~~~~~~~~~^
+        method, url, fields=fields, headers=headers, **urlopen_kw
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/poolmanager.py", line 457, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 872, in urlopen
+    return self.urlopen(
+           ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<13 lines>...
+        **response_kw,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 872, in urlopen
+    return self.urlopen(
+           ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<13 lines>...
+        **response_kw,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/home/mandesko/investment_agent/backend/.venv/lib/python3.13/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/pillars/pillar2/trend-signal (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mandesko/investment_agent/backend/src/tools/pillar2_api.py", line 109, in pillar2_trend_signal_api
+    results[ticker] = {"status": "success", "data": _request_pillar2(payload)}
+                                                    ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/mandesko/investment_agent/backend/src/tools/pillar2_api.py", line 81, in _request_pillar2
+    raise RuntimeError(f"Pillar2 API network error: {exc}") from exc
+RuntimeError: Pillar2 API network error: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/pillars/pillar2/trend-signal (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-07-07 23:44:39,274 [INFO] responder_node: composing final reply
+2026-07-07 23:44:39,275 [INFO] AI: Here is the full analysis with real evidence from fetched data:
+
+### NVDA
+- Last close: 193.34
+- Pillar2 trend signal: `N/A` (score N/A/100, confidence N/A)
+- Technical evidence: ADX=N/A, EMA spread ratio=N/A, RSI=40.15
+- Fundamental snapshot (latest): Revenue=215938000000, NetIncome=120067000000
+- News items fetched: 5
+- Timing view: wait for clearer direction; avoid oversized positions.
+
+This is analysis, not financial advice. Manage risk with position sizing and stop-loss rules.
+2026-07-07 23:50:54,167 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:50:59,085 [INFO] Supervisor → next=fetcher (raw was 'fetcher')
+2026-07-07 23:50:59,086 [INFO] fetcher_node: in (messages=7, fetched=False)
+2026-07-07 23:50:59,086 [INFO] fetcher_node: scoped to explicit tickers ['NVDA']
+2026-07-07 23:50:59,087 [INFO] Fetching OHLCV...
+2026-07-07 23:50:59,207 [INFO] Fetching fundamental data and news...
+2026-07-07 23:51:01,555 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:51:05,062 [INFO] Supervisor → next=analyzer (raw was 'analyzer')
+2026-07-07 23:51:05,063 [INFO] analyzer_node: in (messages=8, has_analysis=False)
+2026-07-07 23:51:05,064 [INFO] Fetch mean reversion for tickers...
+2026-07-07 23:51:05,067 [INFO] Fetched mean reversion for tickers
+2026-07-07 23:51:05,652 [INFO] responder_node: composing final reply
+2026-07-07 23:51:05,652 [INFO] AI: Here is the full analysis with real evidence from fetched data:
+
+### NVDA
+- Last close: 193.82
+- Pillar2 trend signal: `bearish` (score 13.36/100, confidence 0.79)
+- Technical evidence: ADX=19.21, EMA spread ratio=-0.0109, RSI=40.53
+- Fundamental snapshot (latest): Revenue=215938000000, NetIncome=120067000000
+- News items fetched: 5
+- Timing view: wait for trend stabilization or reversal confirmation before entry.
+
+This is analysis, not financial advice. Manage risk with position sizing and stop-loss rules.
+2026-07-07 23:52:43,209 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:52:44,889 [INFO] Supervisor → next=fetcher (raw was 'fetcher')
+2026-07-07 23:52:44,890 [INFO] fetcher_node: in (messages=11, fetched=False)
+2026-07-07 23:52:44,890 [INFO] fetcher_node: scoped to explicit tickers ['NVDA']
+2026-07-07 23:52:44,890 [INFO] Fetching OHLCV...
+2026-07-07 23:52:45,031 [INFO] Fetching fundamental data and news...
+2026-07-07 23:52:47,378 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:52:50,013 [INFO] Supervisor → next=analyzer (raw was 'analyzer')
+2026-07-07 23:52:50,014 [INFO] analyzer_node: in (messages=12, has_analysis=False)
+2026-07-07 23:52:50,015 [INFO] Fetch mean reversion for tickers...
+2026-07-07 23:52:50,018 [INFO] Fetched mean reversion for tickers
+2026-07-07 23:52:50,354 [INFO] responder_node: composing final reply
+2026-07-07 23:52:50,354 [INFO] AI: Here is the full analysis with real evidence from fetched data:
+
+### NVDA
+- Last close: 194.12
+- Pillar2 trend signal: `bearish` (score 13.36/100, confidence 0.79)
+- Technical evidence: ADX=19.21, EMA spread ratio=-0.0108, RSI=40.77
+- Fundamental snapshot (latest): Revenue=215938000000, NetIncome=120067000000
+- News items fetched: 5
+- Timing view: wait for trend stabilization or reversal confirmation before entry.
+
+This is analysis, not financial advice. Manage risk with position sizing and stop-loss rules.
+2026-07-07 23:58:29,620 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:58:32,617 [INFO] Supervisor → next=FINISH (raw was 'FINISH')
+2026-07-07 23:58:32,618 [INFO] responder_node: composing final reply
+2026-07-07 23:58:32,979 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-07 23:58:37,880 [INFO] AI: Fetched market data for NVDA. Collected OHLCV and fundamentals/news for downstream analysis.
+
+Completed full analysis for 1/1 ticker(s): NVDA.
+
+Here is the full analysis based on the latest data and filings:
+
+### 📊 NVDA Analysis Summary
+
+**Performance & Fundamentals:**
+*   **Last Close:** 194.12
+*   **Key Fundamentals (Latest):** Revenue stands at $215.94B, with Net Income at $120.07B. (This data is derived from the latest reported filings.)
+*   **Pillar 2 Trend Signal:** The current trend is flagged as `bearish` (Score: 13.36/100, Confidence: 0.79).
+
+**Technical Indicators:**
+*   **RSI:** 40.77 (Suggests the stock is neither overbought nor oversold, but approaching neutral territory).
+*   **ADX:** 19.21 (Indicates a relatively low trend strength).
+*   **EMA Spread Ratio:** -0.0108 (Suggests short-term momentum is slightly lagging).
+
+**Investment Timing View:**
+*   **Recommendation:** The system's timing view suggests waiting for the trend to stabilize or for a clear reversal confirmation before considering an entry.
+
+***
+
+**Disclaimer:** This analysis is based purely on quantitative data and technical indicators and does not constitute financial advice. Stock investments carry risk, and you should manage your risk using position sizing and stop-loss rules.
+2026-07-08 00:03:26,215 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-08 00:03:28,460 [INFO] Supervisor → next=fetcher (raw was 'fetcher')
+2026-07-08 00:03:28,461 [INFO] fetcher_node: in (messages=17, fetched=False)
+2026-07-08 00:03:28,461 [INFO] fetcher_node: scoped to explicit tickers ['NVDA']
+2026-07-08 00:03:28,462 [INFO] Fetching OHLCV...
+2026-07-08 00:03:28,560 [INFO] Fetching fundamental data and news...
+2026-07-08 00:03:31,100 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-08 00:03:33,247 [INFO] Supervisor → next=analyzer (raw was 'analyzer')
+2026-07-08 00:03:33,248 [INFO] analyzer_node: in (messages=18, has_analysis=False)
+2026-07-08 00:03:33,249 [INFO] Fetch mean reversion for tickers...
+2026-07-08 00:03:33,251 [INFO] Fetched mean reversion for tickers
+2026-07-08 00:03:33,591 [INFO] responder_node: composing final reply
+2026-07-08 00:03:33,591 [INFO] AI: Here is the full analysis with real evidence from fetched data:
+
+### NVDA
+- Last close: 195.49
+- Pillar2 trend signal: `bearish` (score 13.36/100, confidence 0.79)
+- Technical evidence: ADX=19.21, EMA spread ratio=-0.0104, RSI=41.90
+- Fundamental snapshot (latest): Revenue=215938000000, NetIncome=120067000000
+- News items fetched: 5
+- Timing view: wait for trend stabilization or reversal confirmation before entry.
+
+This is analysis, not financial advice. Manage risk with position sizing and stop-loss rules.
+2026-07-08 00:06:07,895 [INFO] Pulling model gemma4:e4b...
+2026-07-08 00:06:08,864 [INFO] Success
+2026-07-08 00:06:08,864 [INFO] Starting Streamlit Playground...
+2026-07-08 00:06:11,869 [INFO] Started Playground on http://localhost:8501
+2026-07-08 00:06:11,869 [INFO] Starting agent...
+2026-07-08 00:06:27,828 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-08 00:06:30,210 [INFO] Supervisor → next=fetcher (raw was 'fetcher')
+2026-07-08 00:06:30,211 [INFO] fetcher_node: in (messages=1, fetched=False)
+2026-07-08 00:06:30,211 [INFO] fetcher_node: scoped to explicit tickers ['NVDA']
+2026-07-08 00:06:30,212 [INFO] Fetching OHLCV...
+2026-07-08 00:06:30,581 [INFO] Fetching fundamental data and news...
+2026-07-08 00:07:02,375 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-07-08 00:07:02,397 [ERROR] Validation/execution fail:relation "rag_chunks" does not exist
+LINE 9:             FROM rag_chunks rc
+                         ^
+2026-07-08 00:07:02,589 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-08 00:07:02,599 [INFO] Supervisor → next=analyzer (raw was 'analyzer')
+2026-07-08 00:07:02,599 [INFO] analyzer_node: in (messages=2, has_analysis=False)
+2026-07-08 00:07:02,601 [INFO] Fetch mean reversion for tickers...
+2026-07-08 00:07:02,768 [INFO] Fetched mean reversion for tickers
+2026-07-08 00:07:02,780 [INFO] responder_node: composing final reply
+2026-07-08 00:07:02,780 [ERROR] Error: cannot access local variable 'ticker' where it is not associated with a value
+2026-07-08 00:10:32,289 [INFO] Pulling model gemma4:e4b...
+2026-07-08 00:10:33,332 [INFO] Success
+2026-07-08 00:10:33,333 [INFO] Starting Streamlit Playground...
+2026-07-08 00:10:36,333 [INFO] Started Playground on http://localhost:8501
+2026-07-08 00:10:36,334 [INFO] Starting agent...
+2026-07-08 00:10:40,507 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-08 00:10:42,914 [INFO] Supervisor → next=fetcher (raw was 'fetcher')
+2026-07-08 00:10:42,915 [INFO] fetcher_node: in (messages=1, fetched=False)
+2026-07-08 00:10:42,915 [INFO] fetcher_node: scoped to explicit tickers ['NVDA']
+2026-07-08 00:10:42,916 [INFO] Fetching OHLCV...
+2026-07-08 00:10:43,492 [INFO] Fetching fundamental data and news...
+2026-07-08 00:10:45,509 [INFO] fetcher_node: retrieving SEC filing context for ['NVDA']
+2026-07-08 00:10:45,531 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2026-07-08 00:10:45,867 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-08 00:10:45,877 [INFO] Supervisor → next=analyzer (raw was 'analyzer')
+2026-07-08 00:10:45,878 [INFO] analyzer_node: in (messages=2, has_analysis=False)
+2026-07-08 00:10:45,879 [INFO] Fetch mean reversion for tickers...
+2026-07-08 00:10:46,010 [INFO] Fetched mean reversion for tickers
+2026-07-08 00:10:46,321 [INFO] responder_node: composing final reply
+2026-07-08 00:10:46,322 [INFO] AI: Here is the full analysis with real evidence from fetched data:
+
+### NVDA
+- Last close: 195.49
+- Pillar2 trend signal: `bearish` (score 13.36/100, confidence 0.79)
+- Technical evidence: ADX=19.21, EMA spread ratio=-0.0104, RSI=41.89
+- Fundamental snapshot (latest): Revenue=215938000000, NetIncome=120067000000
+- News items fetched: 5
+- Timing view: wait for trend stabilization or reversal confirmation before entry.
+- SEC filing context: 6 relevant chunk(s)
+  - [1] 10-Q (2026-05-20) · item_1a: Item 1A of our Annual Report on Form 10-K for the fiscal year ended January&#160;25, 2026, and below. Any one of those risks could harm our business, financial condition and results of operations or reputation, which could cause our stock price to decline. Additional risks, trends and uncertainties...
+  - [2] 10-K (2026-02-25) · item_1a: , and if our operating results are below the expectations of securities analysts or investors, our stock price could decline. Our operating results have in the past fluctuated and may continue to fluctuate due to a number of factors. Therefore, investors should not rely on our past results of operat...
+  - [3] 10-K (2026-02-25) · item_7a: share: Basic $ 4.93 &#160; $ 2.97 &#160; $ 1.21 &#160; Diluted $ 4.90 &#160; $ 2.94 &#160; $ 1.19 &#160; Weighted average shares used in per share computation: Basic 24,359 &#160; 24,555 &#160; 24,690 &#160; Diluted 24,514 &#160; 24,804 &#160; 24,940 &#160; See accompanying Notes to the Consolidated...
+
+This is analysis, not financial advice. Manage risk with position sizing and stop-loss rules.

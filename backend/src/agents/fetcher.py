@@ -11,6 +11,7 @@ from tools.stock import (
     fetch_fundamental_data_and_news,
     fetch_index_tickers,
     fetch_stock_history_data,
+    rag_retrieve,
 )
 
 logger = logging.getLogger(__name__)
@@ -43,10 +44,12 @@ ALL_FETCHER_TOOLS = [
     fetch_stock_history_data,
     fetch_fundamental_data_and_news,
     initial_filter,
+    rag_retrieve,
 ]
 SINGLE_TICKER_TOOLS = [
     fetch_stock_history_data,
     fetch_fundamental_data_and_news,
+    rag_retrieve,
 ]
 
 
@@ -76,6 +79,10 @@ def _last_human_message(messages) -> str:
             return message.content or ""
     return ""
 
+def _needs_filing_context(text: str) -> bool:
+    keywords = ("10-k", "10-q", "filing", "sec", "risk factor", "md&a", "annual report")
+    return any(k in text.lower() for k in keywords)
+
 
 def fetcher_node(state):
     """Fetcher fetches data from the web."""
@@ -97,6 +104,25 @@ def fetcher_node(state):
         fundamentals_result = fetch_fundamental_data_and_news.invoke({"tickers": tickers})
         price_data = price_result.get("data", {}) if isinstance(price_result, dict) else {}
         fundamentals_data = fundamentals_result.get("data", []) if isinstance(fundamentals_result, dict) else []
+        rag_context = {}
+        if _needs_filing_context(user_text):
+            logger.info("fetcher_node: retrieving SEC filing context for %s", tickers)
+            for ticker in tickers:
+                rag_result = rag_retrieve.invoke({
+                    "query": user_text,
+                    "ticker": ticker,
+                    "form_types": ["10-K", "10-Q"],
+                    "top_k": 6,
+                })
+                if isinstance(rag_result, dict) and rag_result.get("status") == "success":
+                    rag_context[ticker] = rag_result.get("data", [])
+                else:
+                    rag_context[ticker] = []
+                    logger.warning(
+                        "RAG retrieval failed for %s: %s",
+                        ticker,
+                        rag_result.get("message") if isinstance(rag_result, dict) else rag_result,
+                    )
 
         valid_tickers = []
         for ticker in tickers:
@@ -108,6 +134,8 @@ def fetcher_node(state):
             f"Fetched market data for {', '.join(valid_tickers or tickers)}. "
             "Collected OHLCV and fundamentals/news for downstream analysis."
         )
+        if rag_context:
+            summary += " Retrieved SEC filing context where available."
         return {
             "messages": [AIMessage(content=summary)],
             "fetched_data": {
@@ -115,6 +143,7 @@ def fetcher_node(state):
                 "tickers": valid_tickers or tickers,
                 "ohlcv": price_data,
                 "fundamentals": fundamentals_data,
+                "rag_context": rag_context,
             },
         }
 

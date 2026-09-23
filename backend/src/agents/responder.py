@@ -35,11 +35,15 @@ def _fmt_num(value, digits: int = 2) -> str:
 def _build_evidence_reply(state: AgentState) -> str | None:
     analysis = state.get("analysis_result") or {}
     per_ticker = analysis.get("per_ticker")
+    fetched = state.get("fetched_data") or {}
+    rag_context = fetched.get("rag_context") or state.get("rag_context") or {}
+
     if not isinstance(per_ticker, dict) or not per_ticker:
         return None
 
     lines = ["Here is the full analysis with real evidence from fetched data:"]
     for ticker, data in per_ticker.items():
+        chunks = rag_context.get(ticker) or []
         p2 = data.get("pillar2") or {}
         mean_rev = data.get("mean_reversion") or {}
         funda = data.get("latest_fundamental") or {}
@@ -75,6 +79,17 @@ def _build_evidence_reply(state: AgentState) -> str | None:
                 f"- Timing view: {timing}.",
             ]
         )
+
+        if chunks:
+            lines.append(f"- SEC filing context: {len(chunks)} relevant chunk(s)")
+            for i, chunk in enumerate(chunks[:3], start=1):  # top 3 to avoid huge replies
+                section = chunk.get("section_name", "unknown")
+                form_type = chunk.get("form_type", "")
+                filing_date = chunk.get("filing_date", "")
+                excerpt = (chunk.get("chunk_text") or "")[:300].strip()
+                lines.append(f"  - [{i}] {form_type} ({filing_date}) · {section}: {excerpt}...")
+        else:
+            lines.append("- No SEC filing context found.")
 
     lines.extend(
         [
