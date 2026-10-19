@@ -53,7 +53,7 @@ SEC item names (US annual report):
 
 ## First research: how to do one 10-K
 
-Pick one US company you already ingest (e.g. NVDA). Work on paper / this folder, not in the agent.
+Pick one US company you already ingest (e.g. NVDA). Work on paper / this folder, not in the agent. Link of NVDA (https://d18rn0p25nwr6d.cloudfront.net/CIK-0001045810/e361e58a-7483-44f5-bc62-a9080ae6ec72.pdf)
 
 1. **Item 1 (60–90 min)**  
    Write 8–12 sentences: products, customers, segments, how revenue is earned, main cost lines, competition. If you cannot explain it without jargon, you do not understand it yet.
